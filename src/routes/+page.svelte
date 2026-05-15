@@ -50,8 +50,6 @@
       downloadLabel = "Скачать main";
     }
   });
-
-  const linkText = "github";
 </script>
 
 <svelte:head>
@@ -68,7 +66,7 @@
     <nav class="nav">
       <a href="/docs">docs</a>
       <a href="#download">скачать</a>
-      <a href={REPO_URL} target="_blank" rel="noreferrer">{linkText}</a>
+      <a href={REPO_URL} target="_blank" rel="noreferrer">github</a>
     </nav>
   </header>
 
@@ -76,7 +74,11 @@
     <div class="headline">
       <div class="eyebrow">Bun + Mineflayer панель управления</div>
       <h1>Minesigma BOT</h1>
-      <p class="copy">Локальный Minecraft-бот с веб-панелью, настройкой подключения, командами из чата, логами, инвентарём, макросами и админ-инструментами для приватных или тестовых миров.</p>
+      <p class="copy">
+        Локальный Minecraft-бот с веб-панелью, настройкой подключения, чат-командами,
+        логами, инвентарём, макросами и админ-инструментами для приватных или
+        тестовых миров.
+      </p>
       <div class="badges">
         <span class="badge">Bun runtime</span>
         <span class="badge">Mineflayer</span>
@@ -92,7 +94,10 @@
         <div class="date">{releaseDate}</div>
       </div>
       <div class="status">{releaseStatus}</div>
-      <div class="notice">Ссылка ведёт на последний релиз GitHub. Если asset не найден, откроется source zip.</div>
+      <div class="notice">
+        Ссылка ведёт на последний релиз GitHub. Если asset не найден, откроется
+        source zip.
+      </div>
       <div class="actions">
         <a class="button {downloadLabel === 'Скачать' ? 'disabled' : ''}" href={downloadHref}>{downloadLabel}</a>
         <a class="button secondary" href={releaseHref} target="_blank" rel="noreferrer">Что изменилось</a>
@@ -110,7 +115,11 @@
   <section class="grid">
     <article class="panel wide">
       <h2>Что внутри</h2>
-      <p>Minesigma BOT запускается локально и открывает браузерную панель. Через неё можно менять сервер, ник, авторизацию, запускать и останавливать бота, смотреть чат, GUI-окна и инвентарь.</p>
+      <p>
+        Minesigma BOT запускается локально и открывает браузерную панель. Через неё
+        можно менять сервер, ник, авторизацию, запускать и останавливать бота,
+        смотреть чат, GUI-окна и инвентарь.
+      </p>
 
       <div class="tabs" role="tablist" aria-label="Выбор пакетного менеджера">
         {#each installers as item}
@@ -162,7 +171,10 @@
 
     <article class="panel">
       <h2>Чат и макросы</h2>
-      <p>Админы могут управлять ботом прямо из обычного чата или личных сообщений. Старые префиксы <code>*</code> и <code>#</code> тоже поддерживаются.</p>
+      <p>
+        Админы могут управлять ботом прямо из обычного чата или личных сообщений.
+        Старые префиксы <code>*</code> и <code>#</code> тоже поддерживаются.
+      </p>
     </article>
 
     <article class="panel">
@@ -176,7 +188,10 @@
 
     <article class="panel">
       <h2>Документация</h2>
-      <p>Подробный разбор команд, режима чата и поведения бота вынесен в отдельную страницу без `.html` в адресе.</p>
+      <p>
+        Подробный разбор команд, режима чата и поведения бота вынесен в отдельную
+        страницу без `.html` в адресе.
+      </p>
       <div class="notice"><a href="/docs">Открыть docs</a></div>
     </article>
   </section>
