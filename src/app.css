@@ -307,6 +307,7 @@ code {
 }
 
 .command-list code {
+  display: block;
   width: 100%;
   border-color: #425164;
   background: linear-gradient(180deg, #141a23, #0f141b);
@@ -389,12 +390,16 @@ code {
 }
 
 .box {
-  display: block;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
   padding: 8px 10px;
   font-family: var(--mono);
   color: #ebf4ff;
   background: linear-gradient(180deg, #121821, #0d1218);
   border: 1px solid #425164;
+  white-space: nowrap;
+  overflow-x: auto;
 }
 
 .notice {
